@@ -1,6 +1,7 @@
 // Entry for news-image-20261125: 25 November 2026 world news, one image.
 // Node 22, standard library only. The newspaper front page is entry.png
-// beside this file. This program copies it, byte for byte, into the
+// beside this file (40 stories, 9 regions, drawn with Python PIL).
+// This program copies it, byte for byte, into the
 // directory the grader reads, so each graded run sees the same image.
 //
 // Local run:
