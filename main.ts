@@ -1,14 +1,14 @@
-// News-image entry for 25 November 2026, Node 22, standard library only.
-// The front-page image lives next to this file as entry.png. This script
-// copies it into the directory the grader reads, byte for byte, so every
-// graded run sees exactly the image committed in this repository.
+// Entry for news-image-20261125: 25 November 2026 world news, one image.
+// Node 22, standard library only. The newspaper front page is entry.png
+// beside this file. This program copies it, byte for byte, into the
+// directory the grader reads, so each graded run sees the same image.
 //
-// To try it outside the grader's container:
+// Local run:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync as copy } from "node:fs";
-import { join as joinPath } from "node:path";
+import { copyFileSync as duplicate } from "node:fs";
+import { join as joinDir } from "node:path";
 
-const dest = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-const image = new URL("./entry.png", import.meta.url);
-copy(image, joinPath(dest, "entry.png"));
+const target = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+const picture = new URL("./entry.png", import.meta.url);
+duplicate(picture, joinDir(target, "entry.png"));
